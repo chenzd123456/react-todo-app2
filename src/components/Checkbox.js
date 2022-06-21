@@ -21,11 +21,11 @@ class Checkbox extends React.Component {
         const { checked, onChange, text } = this.props; // 注释1
 
         return (
-            <div>
+            <div className="Checkbox">
                 <label>
                     <input type="checkbox" checked={checked} onChange={
                         (e) => (onChange(e.target.checked)) // 注释2
-                    }></input>
+                    } />
                     {text}
                 </label>
             </div>

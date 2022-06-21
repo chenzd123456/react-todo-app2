@@ -1,0 +1,8 @@
+
+/** 
+ * 选择class带有TodoListItem和completed的元素，选择后代的label元素 
+ */
+.TodoListItem.completed label {
+    text-decoration:line-through;
+    color: gray;
+}
