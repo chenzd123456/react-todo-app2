@@ -1,8 +1,23 @@
 
 /** 
- * 选择class带有TodoListItem和completed的元素，选择后代的label元素 
+ * 选择class带有TodoListItem和completed的元素，选择后代的label标签 
  */
 .TodoListItem.completed label {
     text-decoration:line-through;
     color: gray;
+}
+
+/** 
+ * 选择class带有TodoList的元素，选择后代的ul标签
+ */
+.TodoList ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+/** 
+ * 选择class带有TodoList的元素，选择后代的ul标签， 选择后代的li标签
+ */
+.TodoList ul li {
+    list-style: none;
 }

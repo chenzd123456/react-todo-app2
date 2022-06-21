@@ -8,8 +8,8 @@ import "../assets/css/components.css"
  * 使用Checkbox组件
  * props:
  *      id： 唯一id
- *      isCompleted： 是否完成
- *      onChange：父组件传递的函数，当todo list item的完成状态发生变化时调用，一共两个参数，第一个参数是id，第二个参数是isCompleted，用于向父组件传递是否完成。
+ *      completed： 是否完成
+ *      onChange：父组件传递的函数，当todo list item的完成状态发生变化时调用，一共两个参数，第一个参数是id，第二个参数是completed，用于向父组件传递是否完成。
  *      text：显示的标签文本
  */
 class TodoListItem extends React.Component {
@@ -18,12 +18,12 @@ class TodoListItem extends React.Component {
      * @returns 返回渲染好的HTML DOM
      */
     render() {
-        const { id, isCompleted, onChange, text } = this.props;
+        const { id, completed, onChange, text } = this.props;
 
         return (
-            <div className={"TodoListItem" + (isCompleted ? " completed" : " active")}> {/* 注释1 */}
+            <div className={"TodoListItem" + (completed ? " completed" : " active")}> {/* 注释1 */}
                 <Checkbox
-                    checked={isCompleted}
+                    checked={completed}
                     onChange={(checked) => (onChange(id, checked))}
                     text={text}
                 />
