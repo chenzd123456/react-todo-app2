@@ -2,6 +2,7 @@ import ReactDOM from 'react-dom/client'; // 导入 ReactDOM
 import Checkbox from "./components/Checkbox" // 导入Checkbox组件
 import TodoListItem from './components/TodoListItem'; // 导入TodoListItem组件
 import TodoList from './components/TodoList'; // 导入TodoList组件
+import TodoApp from './components/TodoApp';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -43,5 +44,10 @@ root.render(
       todoList={[{ id: 1, completed: true, text: "read" }, { id: 2, completed: false, text: "draw" }, { id: 3, completed: false, text: "play" }]}
       onChange={(id, completed) => (alert("id=" + id + " completed=" + completed))}
     />
+
+    <br />
+
+    测试TodoApp:
+    <TodoApp></TodoApp>
   </div>
 );

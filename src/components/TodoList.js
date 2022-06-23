@@ -4,8 +4,9 @@ import TodoListItem from "./TodoListItem" // 导入TodoListItem组件
 class TodoList extends React.Component {
     render() {
         const { todoList, onChange } = this.props;
-        return (
-            <div className="TodoList">
+
+        if (todoList.length > 0) {
+            return (<div className="TodoList">
                 <ul>
                     {
                         todoList.map(
@@ -22,8 +23,13 @@ class TodoList extends React.Component {
                         )
                     }
                 </ul>
+            </div>);
+        }
+        else{
+            <div className="TodoList">
+                <p>no todo item</p>
             </div>
-        )
+        }
     }
 }
 
