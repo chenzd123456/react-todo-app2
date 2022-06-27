@@ -3,6 +3,7 @@ import Checkbox from "./components/Checkbox" // 导入Checkbox组件
 import TodoListItem from './components/TodoListItem'; // 导入TodoListItem组件
 import TodoList from './components/TodoList'; // 导入TodoList组件
 import TodoApp from './components/TodoApp';
+import InputBox from './components/InputBox';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -47,7 +48,15 @@ root.render(
 
     <br />
 
+    测试InputBox:
+    <InputBox onChange={(value) => (alert("value=" + value))}></InputBox>
+    <InputBox onEnterKeyUp={(value) => (alert("value=" + value))} onChange={(value) => { }} value="add todo"></InputBox>
+
+    <br />
+
     测试TodoApp:
     <TodoApp></TodoApp>
+
+
   </div>
 );

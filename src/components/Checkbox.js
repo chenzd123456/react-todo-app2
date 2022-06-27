@@ -23,9 +23,11 @@ class Checkbox extends React.Component {
         return (
             <div className="Checkbox">
                 <label>
-                    <input type="checkbox" checked={checked} onChange={
-                        (e) => (onChange(e.target.checked)) // 注释2
-                    } />
+                    <input
+                        type="checkbox"
+                        checked={checked}
+                        onChange={(event) => (onChange(event.target.checked))} // 注释2
+                    />
                     {text}
                 </label>
             </div>
