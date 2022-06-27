@@ -12,7 +12,7 @@ import React from "react" // 导入React
  * 
  * TODO: 添加CSS样式
  */
-class Checkbox extends React.Component {
+class CheckBox extends React.Component {
     /**
      * React的渲染函数
      * @returns 返回渲染好的HTML DOM
@@ -21,7 +21,7 @@ class Checkbox extends React.Component {
         const { checked, onChange, text } = this.props; // 注释1
 
         return (
-            <div className="Checkbox">
+            <div className="CheckBox">
                 <label>
                     <input
                         type="checkbox"
@@ -35,7 +35,7 @@ class Checkbox extends React.Component {
     }
 }
 
-export default Checkbox; //导出Checkbox
+export default CheckBox; //导出Checkbox
 
 /*
  * 注释1
@@ -43,7 +43,7 @@ export default Checkbox; //导出Checkbox
  * 从props中取出 this.props.checked, this.props.onChange, this.props.text。
  * 
  * 其他写法 1:
- * class Checkbox extends React.Component {
+ * class CheckBox extends React.Component {
  *     render() {
  *         const checked = this.props.checked;
  *         const onChange = this.props.onChange;
@@ -72,7 +72,7 @@ export default Checkbox; //导出Checkbox
  * 这里不需要bind(this)是因为箭头函数可以闭包，this已经是绑定过的。
  * 
  * 其他写法 1:
- * class Checkbox extends React.Component {
+ * class CheckBox extends React.Component {
  *     // 增加handleChange作为HTML的<input type="checkbox">标签的onchange事件的回调函数
  *     handleChange(event) {
  *         const onChange = this.props.onChange; // 从props传入的onChange函数, 赋值给变量onChange

@@ -1,5 +1,5 @@
 import React from "react" // 导入React
-import Checkbox from "./Checkbox"; //导入Checkbox组件
+import CheckBox from "./CheckBox"; //导入Checkbox组件
 import "../assets/css/components.css"
 
 /**
@@ -22,7 +22,7 @@ class TodoListItem extends React.Component {
 
         return (
             <div className={"TodoListItem" + (completed ? " completed" : " active")}> {/* 注释1 */}
-                <Checkbox
+                <CheckBox
                     checked={completed}
                     onChange={(checked) => (onChange(id, checked))}
                     text={text}

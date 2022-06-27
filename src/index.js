@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom/client'; // 导入 ReactDOM
-import Checkbox from "./components/Checkbox" // 导入Checkbox组件
+import CheckBox from "./components/CheckBox" // 导入Checkbox组件
 import TodoListItem from './components/TodoListItem'; // 导入TodoListItem组件
 import TodoList from './components/TodoList'; // 导入TodoList组件
 import TodoApp from './components/TodoApp';
@@ -11,14 +11,14 @@ root.render(
     测试Checkbox:
     {/* 测试check={true}，测试text="checked" */}
     {/* 这里checked已经写死，所以点击也不能变化是否勾选。想要改变必须改变传递给checked的值*/}
-    <Checkbox
+    <CheckBox
       checked={true}
       onChange={(checked) => (alert("checked=" + checked))}
       text="checked" />
 
     {/* 测试check={false}，测试text="unchecked" */}
     {/* 这里checked已经写死，所以点击也不能变化是否勾选。想要改变必须改变传递给checked的值*/}
-    <Checkbox
+    <CheckBox
       checked={false}
       onChange={(checked) => (alert("checked=" + checked))}
       text="unchecked" />
