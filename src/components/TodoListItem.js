@@ -24,7 +24,7 @@ class TodoListItem extends React.Component {
             <div className={"TodoListItem" + (completed ? " completed" : " active")}> {/* 注释1 */}
                 <CheckBox
                     checked={completed}
-                    onChange={(checked) => (onChange(id, checked))}
+                    onChange={(checked) => (onChange(id, checked))} // 使用箭头函数闭包id
                     text={text}
                 />
             </div>
