@@ -1,4 +1,5 @@
-import React from "react" // 导入React
+import React from "react"
+// 导入React
 
 /**
  * Checkbox组件
@@ -12,8 +13,7 @@ import React from "react" // 导入React
  * 
  * TODO: 添加CSS样式
  */
-class CheckBox extends React.Component {
-    // 增加handleChange作为HTML的<input type="checkbox">标签的onchange事件的回调函数
+class CheckBox extends React.Component { // 增加handleChange作为HTML的<input type="checkbox">标签的onchange事件的回调函数
     handleChange(event) {
         const onChange = this.props.onChange; // 从props取出onChange函数, 赋值给变量onChange
         const checked = event.target.checked;
@@ -22,7 +22,8 @@ class CheckBox extends React.Component {
 
     render() {
         const checked = this.props.checked; // 从props取出checked, 赋值给变量checked
-        const text = this.props.text; // 从props取出text, 赋值给变量text
+        const text = this.props.text;
+        // 从props取出text, 赋值给变量text
 
         /**
          * 可以使用ES6的解构赋值，写成:
@@ -32,17 +33,19 @@ class CheckBox extends React.Component {
         return (
             <div>
                 <label>
-                    <input type="checkbox" checked={checked} onChange={
-                        this.handleChange.bind(this) // 因为handleChange函数中使用了this.props，所以这里需要bind(this)。
+                    <input type="checkbox"
+                        checked={checked}
+                        onChange={
+                            this.handleChange.bind(this) // 因为handleChange函数中使用了this.props，所以这里需要bind(this)。
                     }></input>
-                    {text}
-                </label>
+                    {text} </label>
             </div>
         )
     }
 }
 
-export default CheckBox; //导出Checkbox
+export default CheckBox;
+// 导出Checkbox
 
 /*
  * 其他写法 1:

@@ -2,8 +2,13 @@ import React from "react" // 导入React
 
 class Button extends React.Component {
     getClassName() {
+        const {actived, disabled} = this.props;
         let class_name = "Button";
-        const { disabled } = this.props;
+
+        if (actived) {
+            class_name += " Actived";
+        }
+
         if (disabled) {
             class_name += " Disabled";
         }
@@ -11,10 +16,16 @@ class Button extends React.Component {
     }
 
     render() {
-        const { disabled, onClick, text } = this.props;
+        const {disabled, onClick, text} = this.props;
 
         return (
-            <button className={this.getClassName()} type="button" disabled={disabled} onClick={onClick}>{text}</button>
+            <button className={
+                    this.getClassName()
+                }
+                type="button"
+                disabled={disabled}
+                onClick={onClick}>
+                {text}</button>
         )
     }
 }

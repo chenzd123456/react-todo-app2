@@ -1,13 +1,12 @@
 import React from "react" // 导入React
-import { KEY_RETURN } from 'keycode-js';
+import {KEY_RETURN} from 'keycode-js';
 
-class InputBox extends React.Component {
-    /**
+class InputBox extends React.Component { /**
      * 处理按键抬起的事件
      * @param {*} event 事件
      */
     handleKeyUp(event) {
-        const { onEnterKeyUp, value } = this.props
+        const {onEnterKeyUp, value} = this.props
 
         if (event.keyCode === KEY_RETURN) {
             onEnterKeyUp(value);
@@ -19,7 +18,7 @@ class InputBox extends React.Component {
      * @param {*} event 
      */
     handleChange(event) {
-        const { onChange } = this.props;
+        const {onChange} = this.props;
         onChange(event.target.value);
     }
 
@@ -28,15 +27,17 @@ class InputBox extends React.Component {
      * @returns 
      */
     render() {
-        const { value } = this.props;
+        const {value} = this.props;
         return (
             <div>
-                <input
-                    type="text"
-                    onChange={this.handleChange.bind(this)}
-                    onKeyUp={this.handleKeyUp.bind(this)}
-                    value={value}>
-                </input>
+                <input type="text"
+                    onChange={
+                        this.handleChange.bind(this)
+                    }
+                    onKeyUp={
+                        this.handleKeyUp.bind(this)
+                    }
+                    value={value}></input>
             </div>
         );
     }
