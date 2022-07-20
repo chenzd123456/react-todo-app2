@@ -4,6 +4,7 @@ import TodoListItem from './components/TodoListItem'; // 导入TodoListItem组�
 import TodoList from './components/TodoList'; // 导入TodoList组件
 import TodoApp from './components/TodoApp';
 import InputBox from './components/InputBox';
+import Button from './components/Button';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -51,12 +52,14 @@ root.render(
     测试InputBox:
     <InputBox onChange={(value) => (alert("value=" + value))}></InputBox>
     <InputBox onEnterKeyUp={(value) => (alert("value=" + value))} onChange={(value) => { }} value="add todo"></InputBox>
+    
+    <br />
 
+    <Button onClick={()=>(alert("clicked"))} text="click me" disabled={true}> </Button>
+    
     <br />
 
     测试TodoApp:
     <TodoApp></TodoApp>
-
-
   </div>
 );
